@@ -115,8 +115,15 @@ def edit_file(path):
     f, metadata = get_client_file_and_metadata(path)
     file_url = "/submit" + path
     page = """
+<!DOCTYPE html>
 <html>
+<head>
+<title> Directory Viewer </title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body>
+<script src="js/bootstrap.min.js"></script>
 {0}
 <form method="POST" action = "{2}">
 <textarea cols = "80" rows = "35" name = "text_editor">
