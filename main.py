@@ -3,9 +3,9 @@ from dropbox import client, rest, session
 import dropbox
 import bottle
 
-APP_KEY = 'twi5qolo5zsoo35'
-APP_SECRET = 'hidqvr44h9v15th'
-ACCESS_TYPE = 'app_folder'
+APP_KEY = '3vw1z4666e2phqu'
+APP_SECRET = 'uhmoiggjyoml7xa'
+ACCESS_TYPE = 'dropbox'
 TOKEN_STORE = {}
 
 def get_session():
@@ -148,5 +148,5 @@ def submit_file(path):
     temp_file.close()
     return '<html></head><meta http-equiv="REFRESH" content="0;url='+ file_url +'"></head></html>'
 
-run(host='localhost', port=8080, debug=True)
-#run(host='192.168.0.1', port=80)
+#run(host='localhost', port=8080, debug=True)
+run(host='0.0.0.0')
